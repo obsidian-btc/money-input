@@ -5,7 +5,7 @@ var React = require('react');
 var MoneyInput = React.createClass({
   propTypes: {
     setAmount: React.PropTypes.func.isRequired,
-    defaultValue: React.PropTypes.number
+    defaultAmount: React.PropTypes.number
   },
 
   getInitialState: function() {
@@ -40,9 +40,9 @@ var MoneyInput = React.createClass({
   },
 
   componentWillReceiveProps: function(nextProps) {
-    if (nextProps.defaultValue) {
-      if (this.state.amount !== nextProps.defaultValue) {
-        this.setState({amountString: (nextProps.defaultValue / 100).toFixed(2)});
+    if (nextProps.defaultAmount) {
+      if (this.state.amount !== nextProps.defaultAmount) {
+        this.setState({amountString: (nextProps.defaultAmount / 100).toFixed(2)});
       }
     }
   },
