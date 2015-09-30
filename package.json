@@ -1,0 +1,14 @@
+{
+  "name": "money-input",
+  "version": "1.0.0",
+  "description": "A generalized ReactJS money input form",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Justin Litchfield",
+  "license": "MIT",
+  "dependencies": {
+    "react": "^0.13.3"
+  }
+}
