@@ -52,7 +52,9 @@ var MoneyInput = React.createClass({
       <input className="form-control"
         type="text"
         onChange={this.setAmount}
-        value={this.state.amountString} />
+        value={this.state.amountString}
+        onBlur={this.props.onBlur}
+        onFocus={this.props.onFocus} />
     );
   }
 });
