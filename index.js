@@ -16,7 +16,7 @@ var MoneyInput = React.createClass({
   },
 
   setAmount: function(e) {
-    var trimmedString = e.target.value.replace(/\.[\s0]*$/, "");
+    var trimmedString = e.target.value.replace(/\.[\s0]*$/, "").replace(/$|,/,"");
     var floatValue = Math.abs(parseFloat(trimmedString));
 
     if (floatValue.toFixed(2).replace(/\.?0+$/, "") === trimmedString) {
