@@ -40,9 +40,12 @@ var MoneyInput = React.createClass({
   },
 
   componentWillReceiveProps: function(nextProps) {
-    if (nextProps.defaultAmount) {
+    if (nextProps.defaultAmount != null) {
       if (this.state.amount !== nextProps.defaultAmount) {
-        this.setState({amountString: (nextProps.defaultAmount / 100).toFixed(2)});
+        this.setState({
+          amountString: (nextProps.defaultAmount / 100).toFixed(2),
+          amount: nextProps.defaultAmount
+        });
       }
     }
   },
