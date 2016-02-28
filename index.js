@@ -25,7 +25,6 @@ var MoneyInput = React.createClass({
         amount: Math.round(floatValue*100)
       }, function() {
         this.props.setAmount(Math.round(floatValue*100));
-
       });
 
     } else if (trimmedString === "") {
